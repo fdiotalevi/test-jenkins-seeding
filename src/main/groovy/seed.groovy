@@ -1,5 +1,5 @@
 import javaposse.jobdsl.dsl.DslFactory
-import Projects
+import jenkins1.Projects
 
 DslFactory factory = this
 

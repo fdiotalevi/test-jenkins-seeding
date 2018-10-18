@@ -1,3 +1,5 @@
+package jenkins1
+
 class Projects {
 
     public def springBoot =
