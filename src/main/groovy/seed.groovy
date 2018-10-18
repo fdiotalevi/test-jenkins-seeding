@@ -2,7 +2,16 @@ import javaposse.jobdsl.dsl.DslFactory
 
 DslFactory factory = this
 
-def jobs = new Projects().springBoot
+def jobs =
+        [[
+                 name: "Cryptoeval",
+                 repository: "https://github.com/fdiotalevi/cryptoeval.git"
+         ]]
+
+
+
+
+
 
 jobs.each {
     def name = it["name"]
