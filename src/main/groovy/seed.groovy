@@ -2,15 +2,8 @@ import javaposse.jobdsl.dsl.DslFactory
 
 DslFactory factory = this
 
-def jobs =
-        [[
-                 name: "Cryptoeval",
-                 repository: "https://github.com/fdiotalevi/cryptoeval.git"
-         ]]
 
-
-
-
+evaluate(new File("src/main/groovy/projects.groovy"))
 
 
 jobs.each {
