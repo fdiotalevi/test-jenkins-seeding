@@ -2,7 +2,7 @@ import javaposse.jobdsl.dsl.DslFactory
 
 DslFactory factory = this
 
-evaluate(new File("projects.groovy"))
+evaluate(new File("src/main/groovy/projects.groovy"))
 
 jobs.each {
     def name = it["name"]
