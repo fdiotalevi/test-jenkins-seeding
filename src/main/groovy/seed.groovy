@@ -6,7 +6,7 @@ DslFactory factory = this
 evaluate(new File("${WORKSPACE}/src/main/groovy/projects.groovy"))
 
 
-jobs.each {
+new Jobs().jobs.each {
     def name = it["name"]
     def repo = it["repository"]
 
