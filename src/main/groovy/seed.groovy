@@ -3,7 +3,7 @@ import javaposse.jobdsl.dsl.DslFactory
 DslFactory factory = this
 
 
-evaluate(new File("src/main/groovy/projects.groovy"))
+evaluate(new File("${WORKSPACE}"/src/main/groovy/projects.groovy"))
 
 
 jobs.each {
