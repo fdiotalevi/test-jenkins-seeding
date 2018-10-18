@@ -2,11 +2,12 @@ import javaposse.jobdsl.dsl.DslFactory
 
 DslFactory factory = this
 
-evaluate(new File("./projects.groovy"))
+evaluate(new File("projects.groovy"))
 
 jobs.each {
     def name = it["name"]
     def repo = it["repository"]
+
 
     factory.pipelineJob("${name}") {
         definition {
