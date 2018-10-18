@@ -1,9 +1,9 @@
 import javaposse.jobdsl.dsl.DslFactory
+import Projects
 
 DslFactory factory = this
 
-
-def jobs = evaluate readFile("src/main/groovy/projects.groovy")
+def jobs = new Projects().springBoot
 
 jobs.each {
     def name = it["name"]
