@@ -29,8 +29,8 @@ jobs.each {
         branchSources {
             github {
 //                scanCredentialsId('github-ci')
-                repoOwner(it["githubOwner"])
-                repository('githubRepo')
+                repoOwner(job['githubOwner'])
+                repository(job['githubRepo'])
                 includes('*')
             }
         }
