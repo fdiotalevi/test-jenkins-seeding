@@ -5,11 +5,14 @@ import javaposse.jobdsl.dsl.DslFactory
 def jobs =
 [
         [
-         name: "demo-delete-me-1",
-         repository: "https://github.com/fdiotalevi/cryptoeval.git"
+            name: "demo-delete-me-1",
+            repository: "https://github.com/fdiotalevi/cryptoeval.git"
+        ],
+        [
+            name: "demo-delete-me-2",
+            repository: "https://github.com/fdiotalevi/ta4j.git"
         ]
 ]
-
 
 
 
