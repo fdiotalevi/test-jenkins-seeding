@@ -28,7 +28,6 @@ projects.each {
 
         branchSources {
             github {
-//                scanCredentialsId('f0bdd864-99d4-4450-a12c-a00b94d96aa0')
                 repoOwner(project['githubOwner'])
                 repository(project['githubRepo'])
                 includes('*')
