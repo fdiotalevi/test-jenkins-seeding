@@ -6,12 +6,12 @@ def jobs =
 [
         [
             name: "demo-delete-me-1",
-            githubOwner: 'fdiotalevi'
+            githubOwner: 'fdiotalevi',
             githubRepo: "cryptoeval"
         ],
         [
             name: "demo-delete-me-2",
-            githubOwner: "fdiotalevi"
+            githubOwner: "fdiotalevi",
             githubRepo: "ta4j"
         ]
 ]
@@ -34,7 +34,7 @@ jobs.each {
                 includes('*')
             }
         }
-        
+
     }
 
 
