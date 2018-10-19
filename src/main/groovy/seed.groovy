@@ -6,11 +6,13 @@ def jobs =
 [
         [
             name: "demo-delete-me-1",
-            repository: "https://github.com/fdiotalevi/cryptoeval.git"
+            githubOwner: 'fdiotalevi'
+            githubRepo: "cryptoeval"
         ],
         [
             name: "demo-delete-me-2",
-            repository: "https://github.com/fdiotalevi/ta4j.git"
+            githubOwner: "fdiotalevi"
+            githubRepo: "ta4j"
         ]
 ]
 
@@ -20,26 +22,38 @@ def jobs =
 
 DslFactory factory = this
 jobs.each {
-    def name = it["name"]
-    def repo = it["repository"]
+    def job = it
 
+    factory.multibranchPipelineJob("${name}") {
 
-    factory.pipelineJob("${name}") {
-        definition {
-
-            cpsScm {
-                scm {
-                    git {
-                        remote {
-                            url(repo)
-                        }
-                        branches("master")
-                        scriptPath("Jenkinsfile")
-                    }
-                }
+        branchSources {
+            github {
+//                scanCredentialsId('github-ci')
+                repoOwner(it["githubOwner"])
+                repository('githubRepo')
+                includes('*')
             }
         }
+        
     }
+
+
+//    factory.pipelineJob("${name}") {
+//        definition {
+//
+//            cpsScm {
+//                scm {
+//                    git {
+//                        remote {
+//                            url(repo)
+//                        }
+//                        branches("master")
+//                        scriptPath("Jenkinsfile")
+//                    }
+//                }
+//            }
+//        }
+//    }
 }
 
 
