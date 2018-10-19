@@ -24,7 +24,7 @@ DslFactory factory = this
 jobs.each {
     def job = it
 
-    factory.multibranchPipelineJob("${name}") {
+    factory.multibranchPipelineJob("${job['name']}") {
 
         branchSources {
             github {
