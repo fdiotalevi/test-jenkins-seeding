@@ -1,22 +1,22 @@
 import javaposse.jobdsl.dsl.DslFactory
 
+
+//add your project to the array
+def jobs =
+[
+        [
+         name: "demo-delete-me-1",
+         repository: "https://github.com/fdiotalevi/cryptoeval.git"
+        ]
+]
+
+
+
+
+// don't modify down here
+
 DslFactory factory = this
-
-
-//evaluate(new File("${WORKSPACE}/src/main/groovy/projects.groovy"))
-
-class Jobs {
-    public def jobs =
-            [[
-                     name: "Cryptoeval",
-                     repository: "https://github.com/fdiotalevi/cryptoeval.git"
-             ]]
-
-
-}
-
-
-new Jobs().jobs.each {
+jobs.each {
     def name = it["name"]
     def repo = it["repository"]
 
