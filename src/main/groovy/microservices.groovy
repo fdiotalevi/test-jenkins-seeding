@@ -45,6 +45,15 @@ factory.listView("Java Microservices") {
             name(it['name'])
         }
     }
+    columns{
+        status()
+        weather()
+        name()
+        lastSuccess()
+        lastFailure()
+        lastDuration()
+        buildButton()
+    }
 }
 
 
